@@ -1,63 +1,117 @@
 /* styles for body */
 :root {
 	--global-color-1: #225af3;
+    --bg-header: rgb(215,250, 250);
+    --bg-body: rgb(0, 195, 255);
 }
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    background-color: rgb(0, 195, 255);
+    background-color: var(--bg-body);
+    max-width: 80%;
+    margin: auto;
 }
 
 /* styles for header */
 header {
-    background-color: rgb(215, 250, 250);
+    background-color: var(--bg-header);
 	text-align: center;
-    
-    padding: 1.5em 0;
-    margin: -2em -2em 2em -2em;
+    padding: 1.5em 0 0 0;
 }
 
 /* styles for h1 */
 h1 {
     font-family: 'Courier New', Courier, monospace;
-	font-size: 370%;
+	font-size: 3.5em;
 	color: var(--global-color-1);
-	text-indent: 30px;
+	margin: 0 0 0.5em 0;
 }
 .shadow {
 	text-shadow: 2px 2px 2px orange;
 }
 /* styles for nav */
+nav {
+    background-color: #333;
+    width: 100%;
+}
 nav ul {
     list-style-type: none;
-    font-size: 1.6em;
-    list-style-position: inside;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
     text-align: center;    
 }
 nav li {
-    margin-bottom: 0.8em;
+    display: inline-block;
+}
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+nav a:hover, nav a:focus {
+    background-color: var(--global-color-1);
+    font-style: italic;
+}
+/* styles for image */
+.portfolio-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid white;
+}
+main.centered-content {
+    display: block;
+    width: 100%;
+    margin: 3em auto;
+    text-align: center;
+}
+.zoomable-img {
+    width: 35em;
+    min-width: 10%;
+    max-width: none;
+}
+/* styles for main */
+main {
+    float: left;
+    width: 60%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+}
+/* styles for aside */
+aside {
+    float: right;
+    width: 35%;
+    margin-top: 2em;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 1.5em;
+    box-sizing: border-box;
+    border-radius: 8px;
 }
 /* styles for h2 */
 h2 {
 	font-size: 180%;
-	text-align: center;
-    color: var(--global-color-1);
-    margin-top: 2.5em;
-    margin-bottom: 1em;
-    margin-left: 15%;
-    margin-right: 15%;
+	color: var(--global-color-1);
+    margin-top: 0;
+    margin-bottom: 0.8em;  
 }
-ol {
-    text-align: center;
-    font-size: 120%;
-    list-style-type: none;
-    list-style-position: inside;
-    padding-left: 0;
-    line-height: 1.5;
+p {
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.6;
 }
-ol li {
-    margin-bottom: 0.4em;
+ol, ul.content-list {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: white;
+    padding-left: 1.5em;
+}
+ol li, ul.content-list li {
+    margin-bottom: 0.6em;
 }
 /* styles for p story-text */
 .story-text {
@@ -75,8 +129,7 @@ ol li {
 /* styles for section */
 section {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 5em;
-    margin-bottom: 3em;
+  
  
 }
 .section-1 {
@@ -93,8 +146,11 @@ a:hover, a:focus {
 }
 /* styles for footer */
 footer p {
-	text-align: center;
-
+    clear: both;
+    border-top: 1px solid white;
+    padding: 1em 0;
+    text-align: center;
+    color: White;
 }
 .info {
     color: rgba(255, 0, 0, 0.808);
